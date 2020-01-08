@@ -1,4 +1,4 @@
-precision  mediump float;
+precision mediump float;
 
 uniform vec2 resolution;
 uniform vec2 mouse; // return mouse position between 0 to 1
@@ -10,7 +10,7 @@ void main () {
 
   vec3 color = vec3(0.,0.,1.);
 
-  vec2 pos = abs(vec2(st)-vec2(mouse.x*ratio, mouse.y));
+  vec2 pos = abs(st-vec2(mouse.x*ratio, mouse.y));
   float pct = max(pos.x, pos.y);
 
   color += vec3(step(.1, pct));
